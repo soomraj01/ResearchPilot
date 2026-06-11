@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary-bg text-primary-text font-sans antialiased;
+  }
+  ::selection {
+    background-color: rgba(122, 98, 72, 0.3);
+    color: #1F1F1F;
+  }
+}
+
+@layer utilities {
+  .premium-panel {
+    @apply bg-primary-bg border border-border-subtle shadow-sm;
+  }
+
+  .premium-card {
+    @apply bg-card-bg border border-border-subtle shadow-sm transition-all duration-250 ease-apple;
+  }
+
+  .premium-card:hover {
+    @apply border-accent-brown/20 shadow-md -translate-y-0.5;
+  }
+
+  .premium-input {
+    @apply bg-card-bg border border-border-subtle text-primary-text transition-all duration-250 ease-apple focus:outline-none focus:border-accent-brown focus:ring-1 focus:ring-accent-brown;
+  }
+
+  .premium-button-primary {
+    @apply bg-primary-text text-card-bg font-medium transition-all duration-250 ease-apple hover:bg-primary-text/90 active:scale-[0.98];
+  }
+
+  .premium-button-secondary {
+    @apply bg-transparent border border-border-subtle text-secondary-text font-medium transition-all duration-250 ease-apple hover:bg-black/5 hover:text-primary-text active:scale-[0.98];
+  }
+
+  /* Custom styling for sleek scrollbars */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-black/10 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-black/20;
+  }
+}
